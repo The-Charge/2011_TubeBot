@@ -1,0 +1,4 @@
+cd /
+cd ni-rt
+cd system
+put 2014_TubeBot/Debug/2014_TubeBot.out FRC_UserProgram.out
