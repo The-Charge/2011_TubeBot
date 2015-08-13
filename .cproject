@@ -1,29 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?fileVersion 4.0.0?>
-
-<cproject>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
-		<cconfiguration id="org.eclipse.cdt.core.default.config.1202986716">
-			<storageModule buildSystemId="org.eclipse.cdt.core.defaultConfigDataProvider" id="org.eclipse.cdt.core.default.config.1202986716" moduleId="org.eclipse.cdt.core.settings" name="Configuration">
-				<externalSettings/>
+		<cconfiguration id="com.penfieldrobotics.criotools.projtype.debug.804514466">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.penfieldrobotics.criotools.projtype.debug.804514466" moduleId="org.eclipse.cdt.core.settings" name="cRIODebug">
+				<externalSettings>
+					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/2011_TubeBot"/>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/2011_TubeBot/cRIODebug"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="2011_TubeBot" srcPrefixMapping="" srcRootPath=""/>
+					</externalSetting>
+				</externalSettings>
 				<extensions>
-					<extension id="com.windriver.ide.core.WRScannerInfoProvider" point="org.eclipse.cdt.core.ScannerInfoProvider"/>
-					<extension id="com.windriver.ide.core.WRElfParserVxWorks" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="so" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.sharedLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.sharedLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" description="" id="com.penfieldrobotics.criotools.projtype.debug.804514466" name="cRIODebug" parent="com.penfieldrobotics.criotools.projtype.debug" postbuildStep="powerpc-wrs-vxworks-nm &quot;${ProjDirPath}/${ConfigName}/${BuildArtifactFileName}&quot; | tclsh &quot;${WIND_BASE}/host/resource/hutils/tcl/munch.tcl&quot; -c ppc | sed &quot;s/extern void\(.*\);/extern void \1 __attribute__((externally_visible));/&quot; &gt; &quot;${ProjDirPath}/${ConfigName}/ctdt.c&quot;  &amp;&amp; powerpc-wrs-vxworks-gcc -c &quot;${ProjDirPath}/${ConfigName}/ctdt.c&quot; -o ctdt.o -DCPU=PPC603 -DTOOL_FAMILY=gnu -DTOOL=gnu -D_WRS_KERNEL -fmessage-length=0  -mcpu=603 -mstrict-align -mlongcall &amp;&amp;  powerpc-wrs-vxworks-g++ &quot;${ProjDirPath}/${ConfigName}/ctdt.o&quot; &quot;${ProjDirPath}/${ConfigName}/${BuildArtifactFileName}&quot; -o &quot;${ProjDirPath}/${ConfigName}/${BuildArtifactFileName}.out&quot; -DCPU=PPC603 -DTOOL_FAMILY=gnu -DTOOL=gnu -D_WRS_KERNEL -fmessage-length=0  -mcpu=603 -mstrict-align -mlongcall -r -Wl,-X -static -T &quot;${WIND_BASE}\..\share\ldscripts\dkm.ld&quot; &amp;&amp;  powerpc-wrs-vxworks-stripsyms.bat &quot;${ProjDirPath}/${ConfigName}/${BuildArtifactFileName}.out&quot; &quot;${WIND_BASE}\..\lib\libstdc++.a&quot; &quot;${WIND_BASE}\..\lib\libsupc++.a&quot; &quot;${WIND_BASE}\..\..\lib\gcc\powerpc-wrs-vxworks\4.8.2\libgcc.a&quot;">
+					<folderInfo id="com.penfieldrobotics.criotools.projtype.debug.804514466." name="/" resourcePath="">
+						<toolChain id="com.penfieldrobotics.criotools.projtype.debug.tools.1791707830" name="Thunder cRIO Tools" superClass="com.penfieldrobotics.criotools.projtype.debug.tools">
+							<option id="com.penfieldrobotics.criotools.crosstools.prefix.2082634475" superClass="com.penfieldrobotics.criotools.crosstools.prefix" value="powerpc-wrs-vxworks-" valueType="string"/>
+							<option id="com.penfieldrobotics.criotools.crosstools.path.494887704" superClass="com.penfieldrobotics.criotools.crosstools.path" value="&quot;${WIND_BASE}/../../bin/&quot;" valueType="string"/>
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.penfieldrobotics.criotools.crosstools.tgtplatform.149625808" isAbstract="false" name="Thunder cRIO Tools Target Platform" superClass="com.penfieldrobotics.criotools.crosstools.tgtplatform"/>
+							<builder buildPath="${workspace_loc:/2011_TubeBot}/cRIODebug" id="com.penfieldrobotics.criotools.crosstools.builder.2066502176" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Thunder cRIO Tools Builder" superClass="com.penfieldrobotics.criotools.crosstools.builder"/>
+							<tool id="com.penfieldrobotics.criotools.crosstools.ccompiler.511080876" name="Thunder cRIO Tools C Compiler" superClass="com.penfieldrobotics.criotools.crosstools.ccompiler">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.413251183" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1431694354" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.678014201" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:\workspace\2011_TubeBot\include&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.323840001" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="com.penfieldrobotics.criotools.crosstools.cppcompiler.294348874" name="Thunder cRIO Tools C++ Compiler" superClass="com.penfieldrobotics.criotools.crosstools.cppcompiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.946775904" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.1805843833" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.include.paths.933380226" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:\workspace\2011_TubeBot\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${WIND_BASE}/../include/WPILib&quot;"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.2134436974" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="CPU=PPC603"/>
+									<listOptionValue builtIn="false" value="TOOL_FAMILY=gnu"/>
+									<listOptionValue builtIn="false" value="TOOL=gnu"/>
+									<listOptionValue builtIn="false" value="_WRS_KERNEL"/>
+								</option>
+								<option id="gnu.cpp.compiler.option.other.other.524280895" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -mcpu=603 -mstrict-align -mlongcall" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1204590697" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="com.penfieldrobotics.criotools.crosstools.partiallinker.19687944" name="Thunder cRIO Tools Partial Linker" superClass="com.penfieldrobotics.criotools.crosstools.partiallinker">
+								<option defaultValue="true" id="gnu.cpp.link.option.shared.2047492009" name="Shared (-shared)" superClass="gnu.cpp.link.option.shared" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.libs.1431231382" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="wpilib"/>
+									<listOptionValue builtIn="false" value="supc++"/>
+									<listOptionValue builtIn="false" value="stdc++"/>
+									<listOptionValue builtIn="false" value="gcc"/>
+								</option>
+								<option id="gnu.cpp.link.option.paths.2135204093" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${WIND_BASE}/../lib&quot;"/>
+								</option>
+								<option id="gnu.cpp.link.option.other.221941355" superClass="gnu.cpp.link.option.other" valueType="stringList">
+									<listOptionValue builtIn="false" value="-X"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.498283765" superClass="gnu.cpp.link.option.flags" value=" -mcpu=603 -mstrict-align -mlongcall -static -r" valueType="string"/>
+								<option id="gnu.cpp.link.option.nostdlibs.1839717052" superClass="gnu.cpp.link.option.nostdlibs" value="true" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.711132894" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="include"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
-			<storageModule moduleId="org.eclipse.cdt.core.pathentry">
-				<pathentry kind="src" path=""/>
-				<pathentry kind="out" path=""/>
-				<pathentry kind="con" path="com.windriver.ide.core.WR_CONTAINER"/>
-				<pathentry kind="con" path="com.windriver.ide.core.build.model.WR_USERDEFINED_CONTAINER"/>
-			</storageModule>
-			<storageModule moduleId="scannerConfiguration"/>
-			<storageModule moduleId="userdefinedContainer">
-				<indexAllFiles value="false"/>
-				<initialized value="true"/>
-			</storageModule>
 		</cconfiguration>
 	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="2011_TubeBot.com.penfieldrobotics.criotools.projtype.2059183534" name="Shared Library" projectType="com.penfieldrobotics.criotools.projtype"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.penfieldrobotics.criotools.projtype.debug.804514466;com.penfieldrobotics.criotools.projtype.debug.804514466.;com.penfieldrobotics.criotools.crosstools.ccompiler.511080876;cdt.managedbuild.tool.gnu.c.compiler.input.323840001">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="com.penfieldrobotics.criotools.projtype.debug.804514466;com.penfieldrobotics.criotools.projtype.debug.804514466.;com.penfieldrobotics.criotools.crosstools.cppcompiler.294348874;cdt.managedbuild.tool.gnu.cpp.compiler.input.1204590697">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>
